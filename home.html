@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>The Hub</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href=""><img src="fast-delivery.png" alt=""></a>
+            <a href="#">Home</a>
+            <a href="#">Track Order</a>
+            <a href="#">Pricing</a>
+            <a href="#">About</a>
+            <a href="#">Login | Register</a>
+        </nav>
+    </header>
+    <section class="all-sections">
+        <!-- <section style="background:white; width: 100%; height: 400px;">
+
+        </section> -->
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-text">
+                  <h1>We are provied best<br> courier services.</h1>
+                  <h3>We deliver your products safely to your home in a reasonable time.</h3>
+                  <a href="">Get Started</a>
+                </div>
+                <img src="truck.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-text">
+                    <h1>We are provied best<br> courier services.</h1>
+                    <h3>We deliver your products safely to your home in a reasonable time.</h3>
+                    <a href="">Get Started</a>
+                </div>
+                <img src="freight.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-text">
+                    <h1>We are provied best<br> courier services.</h1>
+                    <h3>We deliver your products safely to your home in a reasonable time.</h3>
+                    <a href="">Get Started</a>
+                </div>
+                <img src="ship.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-text">
+                    <h1>We are provied best<br> courier services.</h1>
+                    <h3>We deliver your products safely to your home in a reasonable time.</h3>
+                    <a href="">Get Started</a>
+                </div>
+                <img src="train.jpg" alt="">
+              </div>
+              
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span></span>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 4500,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          },
+          on: {
+            autoplayTimeLeft(s, time, progress) {
+              progressCircle.style.setProperty("--progress", 1 - progress);
+              progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            }
+          }
+        });
+      </script>
+</body>
+</html>
