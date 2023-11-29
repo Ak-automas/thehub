@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body{
+    background: #EEEEEE;
+}
+
+:root {
+    --blue-1: rgba(47, 128, 237, 1);
+    
+}
+
+
+/* header style.... */
+nav{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+    background: rgba(255, 255, 255, 0.616);
+    height: 5rem;
+    align-items: center;
+    justify-items: center;
+    width: 80vw;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 700;
+}
+
+.logo{
+    width: 70px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* sections start here... */
+
+.all-sections{
+    min-height: calc(100vh - 5rem);
+    width: 80vw;
+    margin: auto;
+    margin-top: 30px;
+    display: grid;
+    gap: 30px;
+}
+
+/* slider css */
+
+.swiper {
+    width: 100%;
+    height: 60vh;
+    max-height: 60vh;
+}
+
+.swiper-slide {
+    position: relative;
+    text-align: left;
+    font-size: 28px;
+    background: #444040;
+    height: 100%;
+    
+}
+
+.swiper-slide .slider-text{
+    z-index: 1;
+    position: absolute;
+    margin-left: 80px;
+    text-align: left;
+    top: 35%;
+    color: white;
+    font-family: 'Raleway';
+    display: grid;
+    gap: 10px;
+}
+
+.swiper-slide .slider-text h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.swiper-slide .slider-text h1{
+    font-size: 49px;
+    font-weight: 600;
+}
+
+.swiper-slide .slider-text a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background: #2F80ED;
+    padding: 10px 20px;
+    width: max-content;
+}
+
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+/* sections global */
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+}
+
+/* section 2 homepage */
+
+.homepage-icons{
+    height: 15vh;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+.homepage-icons div{
+    position: relative;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px;
+    align-items: center;
+    justify-items: center;
+}
+
+.homepage-icons img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* section 3 below */
+
+.homepage-services{
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    height: max-content;
+    padding: 20px;
+}
+
+.homepage-services h1{
+    font-family: "Raleway-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #11101c;
+    font-size: 39px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.homepage-services .service-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.homepage-services .service-cards div{
+    display: grid;
+    grid-template-rows: repeat(5, max-content);
+    justify-items: center;
+    /* width: 424px; 
+    height: 583px;  */
+    background: white; 
+    box-shadow: 0px 0px 20px 5px rgba(63, 61, 86, 0.05); 
+    border-radius: 16px; 
+    border: 1px white solid;
+    padding: 30px;
+    gap: 10px;
+    margin-block: 30px;
+
+}
+
+.service-cards .icon-1{
+    position: relative;
+    width: 78px;
+    height: 94px;
+    object-fit: contain;
+}
+
+.service-cards .icon-2{
+    position: relative;
+    width: 78px;
+    height: 94px;
+    object-fit: contain;
+}
+
+.service-cards .icon-3{
+    position: relative;
+    width: 78px;
+    height: 94px;
+    object-fit: contain;
+}
+
+.service-cards .text-wrapper {
+    width: 100%;
+    padding-block: 10px;
+    height: max-content;
+    font-family: "Raleway-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #454458;
+    font-size: 21px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.service-cards p{
+    position: relative;
+    display: grid;
+    width: 100%;
+    font-family: "Raleway-Regular", Helvetica;
+    font-weight: 400;
+    color: #7b7a8b;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 23.2px;
+}
+
+.service-cards .desc-text{
+    min-height: 90px;
+}
+
+.service-cards span{
+    width: 100%;
+    text-align: left;
+}
+
+.service-cards span p{
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    gap: 10px;
+}
+
+.service-cards span p::before{
+    width: 7px;
+    height: 7px;
+    background: orange;
+    position: relative;
+    content: "";
+    border-radius: 50%;
+}
+
+.service-cards a{
+    display: grid;
+    font-family: "Oxanium-Bold", Helvetica;
+    width: 100%;
+    height: max-content;
+    padding: 10px 0;
+    color: var(--blue-1);
+    border-radius: 5px;
+    border: 1px solid #16a7fc;
+    text-decoration: none;
+    justify-items: center;
+    margin-top: 18px;
+}
+
+.service-cards a:hover{
+    background: var(--blue-1);
+    color: #ffffff;
+}
+
+.track-order{
+    width: 100%;
+    height: 20vh;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+}
+
+.track-order h1{
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 800;
+    color: #3e4255;
+    font-size: 36px;
+    letter-spacing: 2.88px;
+    line-height: 64px;
+}
+
+.track-order h5{
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #3e4255;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+
+.track-order form{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.track-order form img{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10%;
+}
+
+.track-order input{
+    position: relative;
+    width: 300px;
+    height: 3.5rem;
+    padding: 5px;
+    padding-left: 40px;
+    border-radius: 5px;
+    font-family: "MartelSans-Light", "Helvetica";
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+    outline: none;
+    border: none;
+}
+
+
+.track-order .track-order-input{
+    position: relative;
+    height: max-content;
+    width: max-content;
+    display: grid;
+    align-items: center;
+}
+
+.track-order .track-order-input::after{
+    position: absolute;
+    content: url(../img/location.svg);
+    /* background-image: url(img/location.svg); */
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    left: 10px;
+}
+
+.track-order p{
+    height: 3.5rem;
+    width: max-content;
+    padding: 5px;
+    text-align: center;
+    background: var(--blue-1);
+    color: white;
+    border-radius: 4px;
+    width: 80px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
