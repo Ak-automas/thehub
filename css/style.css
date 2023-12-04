@@ -17,6 +17,30 @@ body{
     
 }
 
+@font-face {
+    font-family: Pangolin;
+    src: url(Pangolin-Regular.ttf);
+}
+
+@font-face {
+    font-family: Oxanium;
+    src: url(Oxanium-Medium.ttf);
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Medium.ttf);
+}
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url(Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: Raleway-ExtraBold;
+    src: url(Raleway-ExtraBold.ttf);
+}
 
 /* header style.... */
 nav{
@@ -582,6 +606,7 @@ section{
     position: relative;
     display: grid;
     gap: 80px;
+    height: max-content;
 }
 
 .reach-out h1{
@@ -598,7 +623,7 @@ section{
 
 .reach-out .reach-out-parent{
     position: relative;
-    height: 120vh;
+    height: max-content;
     width: 100%;
     background: url(../img/reachout.jpg);
     background-size: cover;
@@ -981,4 +1006,485 @@ section{
     width: 53px;
     height: 53px;
     border-radius: 50%;
+}
+
+
+
+/* about us */
+.about-us{
+    min-height: 100vh;
+    width: 80vw;
+    margin: auto;
+    margin-top: 40px;
+    height: max-content;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+}
+
+.about-us .child-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+    gap: 50px;
+    background: #F3F5F6;
+    padding-block: 30px;
+}
+
+.about-us .child-1 .ceo-img{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us .child-1 .ceo-img p{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 310px;
+    background: #FFF;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    padding: 30px;
+    gap: 20px;
+    column-gap: 30px;
+}
+
+.about-us .child-1 .ceo-img p span{
+    display: grid;
+    grid-column: span 2;
+}
+
+.about-us .child-1 .ceo-img p .ceo-name{
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.about-us .child-1 .ceo-img p .ceo-label{
+    color: #6F1DF4;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.about-us .child-1 .ceo-img p .ceo-text{
+    color: rgba(60, 60, 67, 0.85);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.about-us .child-1 .ceo-img p .ceo-sign{
+    grid-column: span 1;
+}
+
+.about-us .child-1 .ceo-img p .ceo-sign img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-us .child-1 .ceo-img p .ceo-social-icons{
+    grid-column: span 1;
+    grid-template-columns: repeat(3, max-content);
+    align-content: center;
+    gap: 10px;
+    justify-content: end;
+}
+
+.about-us .child-1 .company-desc{
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    padding: 30px;
+    align-content: center;
+    gap: 30px;
+}
+
+.about-us .child-1 .company-desc h1{
+    color:  #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.about-us .child-1 .company-desc p{
+    color: rgba(60, 60, 67, 0.85);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.about-us .child-1 .company-desc div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: max-content;
+    gap: 35px;
+}
+
+.about-us .child-1 .company-desc div a{
+    display: grid;
+    text-decoration: none;
+    border-radius: 64px;
+    padding: 20px 48px;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: Raleway;
+    font-weight: 600;
+    width: 80%;
+    height: max-content;
+}
+
+.about-us .child-1 .company-desc div a:nth-child(1){
+    background: #2F80ED;
+}
+
+.about-us .child-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60vh;
+    gap: 35px;
+    margin-block: 40px;
+}
+
+.about-us .child-2 div{
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-us .child-2 div h1{
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.about-us .child-2 div p{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: rgba(60, 60, 67, 0.85);
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 25px;
+    border: 1px solid #16A7FC;
+    background: #E5E5E5;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
+
+
+/* contact us */
+
+.contact-us{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin: auto;
+    min-height: 50vh;
+    margin-block: 40px;
+    background: #FFF;
+    border-radius: 17px;
+}
+
+.contact-us .contact-us-form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.contact-us .contact-us-form form{
+    display: grid;
+    grid-template-rows: repeat(7, max-content);
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 20px 80px;
+    border-radius: 17px;
+    background: #2F80ED;
+}
+
+.contact-us .contact-us-form form h1{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.contact-us .contact-us-form form h5{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.contact-us .contact-us-form form input{
+    position: relative;
+    width: 100%;
+    background: #D9D9D9;
+    outline: none;
+    border: none;
+    height: 50px;
+    padding: 5px;
+}
+
+.contact-us .contact-us-form form textarea{
+    position: relative;
+    width: 100%;
+    background: #D9D9D9;
+    outline: none;
+    border: none;
+    height: 150px;
+    padding: 5px;
+}
+
+.contact-us .contact-us-form form button{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    padding: 15px 40px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background: #D9D9D9;
+    font-weight: 700;
+}
+
+.contact-us .contact-us-map{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+
+.contact-us .contact-us-map .vector-map{
+    position: relative;
+    width: 110%;
+    height: 40%;
+    left: -10%;
+    z-index: 5;
+}
+
+.contact-us .contact-us-map .map{
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.contact-us .contact-us-map h3{
+    position: absolute;
+    z-index: 3;
+    color: #000;
+    right: 50px;
+    bottom: 150px;
+}
+
+/* login page */
+
+.login-page{
+    position: relative;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 70vh;
+    width: 80%;
+    margin: auto;
+    margin-block: 60px;
+    gap: 50px;
+}
+
+.login-page .child-1 {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+}
+
+.login-page .child-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-page .child-2 form{
+    display: grid;
+    grid-template-rows: repeat(7, max-content);
+    width: 100%;
+    height: 100%;
+    
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.switch input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+  /* Rounded sliders */
+.switch .slider.round {
+    border-radius: 34px;
+}
+
+.switch .slider.round:before {
+    border-radius: 50%;
+}
+
+/* section footer */
+
+.footer{
+    position: relative;
+    height: max-content;
+    padding: 60px 30px;
+    background: #333;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.footer .child-1{
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    justify-items: center;
+    align-content: center;
+    gap: 30px;
+
+}
+
+.footer .child-1 h1{
+    color: #FFF;
+    font-family: Pangolin;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer .child-1 h4{
+    color: #9291A1;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.footer .child-1 p{
+    color: #DBDBE9;
+    font-family: Raleway;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer .child-2{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+    width: 100%;
+    height: max-content;
+    gap: 20px;
+}
+
+.footer .child-2 div{
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.footer .child-2 div h1{
+    color: #FFF;
+    font-family: Oxanium;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.footer .child-2 div a{
+    text-decoration: none;
+    color: #9291A1;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px; 
 }
