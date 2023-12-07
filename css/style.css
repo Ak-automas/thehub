@@ -42,18 +42,30 @@ body{
     src: url(Raleway-ExtraBold.ttf);
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Medium.ttf);
+}
+
+body{
+    overflow-x: hidden;
+}
+
 /* header style.... */
+
 nav{
     display: grid;
+    position: sticky;
+    z-index: 100;
     gap: 15px;
     grid-template-columns: repeat(6, 1fr);
     background: rgba(255, 255, 255, 0.616);
-    height: 5rem;
+    height: 120px;
     align-items: center;
     justify-items: center;
-    width: 80vw;
+    width: 100vw;
     margin: auto;
-    margin-top: 2vh;
+
 }
 
 nav a{
@@ -107,19 +119,17 @@ nav .login-btn{
 
 .all-sections{
     min-height: calc(100vh - 5rem);
-    width: 80vw;
+    width: 100%;
     margin: auto;
-    margin-top: 30px;
     display: grid;
-    gap: 30px;
 }
 
 /* slider css */
 
 .swiper {
     width: 100%;
-    height: 60vh;
-    max-height: 60vh;
+    height: calc(100vh - 120px);
+    max-height: 80vh;
 }
 
 .swiper-slide {
@@ -148,7 +158,6 @@ nav .login-btn{
     font-weight: 400;
 }
 
-
 .swiper-slide .slider-text h1{
     font-size: 49px;
     font-weight: 600;
@@ -162,7 +171,6 @@ nav .login-btn{
     padding: 10px 20px;
     width: max-content;
 }
-
 
 .swiper-slide img {
     display: block;
@@ -207,12 +215,13 @@ section{
     position: relative;
     width: 100%;
     min-height: 10vh;
+    margin-bottom: 60px;
 }
 
 /* section 2 homepage */
 
 .homepage-icons{
-    height: 15vh;
+    height: 22vh;
     background: #ffffff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -372,11 +381,12 @@ section{
 
 .track-order{
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     background: #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px;
+    margin-bottom: 0;
 }
 
 .track-order h1{
@@ -463,8 +473,7 @@ section{
 
 .video{
     width: 100%;
-    height: 70vh;
-    border-radius: 16px;
+    height: 80vh;
     background: linear-gradient(0deg, rgba(10, 9, 13, 0.80) 0%, 
         rgba(10, 9, 13, 0.80) 100%), 
         url(../img/video-image.jpg), lightgray;
@@ -514,7 +523,7 @@ section{
     display: grid;
     grid-template-rows: repeat(3, max-content);
     height: max-content;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .our-country-services h5{
@@ -537,13 +546,13 @@ section{
     font-size: 39px;
     text-align: center;
     width: 100%;
+    margin-bottom: 30px;
     
 }
 
 .our-country-services .service-cards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
 }
 
 .our-country-services .service-cards div{
@@ -555,6 +564,8 @@ section{
     gap: 10px;
     margin-block: 30px;
     height: 580px;
+    transition: .3s;
+    cursor: pointer;
 }
 
 .our-country-services .service-cards .host-img{
@@ -564,6 +575,11 @@ section{
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.our-country-services .service-cards div:hover img{
+    filter: brightness(1.5);
+    transition: .3s ease-in-out;
 }
 
 .our-country-services .service-cards svg{
@@ -954,7 +970,7 @@ section{
 }
 
 .swiper-slide-testimonial h1{
-    color: var(--Blue-1, #2F80ED);
+    color: #2F80ED;
     font-family: Raleway;
     font-size: 18px;
     font-style: normal;
@@ -1013,7 +1029,7 @@ section{
 /* about us */
 .about-us{
     min-height: 100vh;
-    width: 80vw;
+    width: 100vw;
     margin: auto;
     margin-top: 40px;
     height: max-content;
@@ -1158,6 +1174,7 @@ section{
     height: 60vh;
     gap: 35px;
     margin-block: 40px;
+    padding: 30px 50px;
 }
 
 .about-us .child-2 div{
@@ -1308,11 +1325,10 @@ section{
 
 .login-page{
     position: relative;
-    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 70vh;
-    width: 80%;
+    width: 90vw;
     margin: auto;
     margin-block: 60px;
     gap: 50px;
@@ -1350,7 +1366,7 @@ section{
 }
 
 .login-page .login-inputs label{
-    color: var(--black-800333333, #333);
+    color: #333;
     font-feature-settings: 'clig' off, 'liga' off;
 
     font-family: SF Pro Display;
@@ -1474,7 +1490,7 @@ section{
     background: #333;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+    margin-bottom: 0;
 }
 
 .footer .child-1{
