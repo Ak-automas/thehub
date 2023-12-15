@@ -122,6 +122,7 @@ nav .login-btn{
     width: 100%;
     margin: auto;
     display: grid;
+    justify-content: center;
 }
 
 /* slider css */
@@ -170,6 +171,7 @@ nav .login-btn{
     background: #2F80ED;
     padding: 10px 20px;
     width: max-content;
+    border-radius: 7px;
 }
 
 .swiper-slide img {
@@ -220,38 +222,13 @@ section{
 
 /* section 2 homepage */
 
-.homepage-icons{
-    height: 22vh;
-    background: #ffffff;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-items: center;
-    padding: 10px;
-}
-
-.homepage-icons div{
-    position: relative;
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    gap: 8px;
-    align-items: center;
-    justify-items: center;
-}
-
-.homepage-icons img{
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-
-/* section 3 below */
 
 .homepage-services{
     display: grid;
     grid-template-rows: max-content 1fr;
     height: max-content;
     padding: 20px;
+    margin-block: 65px;
 }
 
 .homepage-services h1{
@@ -261,6 +238,7 @@ section{
     font-size: 39px;
     text-align: center;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 
@@ -381,12 +359,49 @@ section{
 
 .track-order{
     width: 100%;
-    height: 25vh;
     background: #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh;
     padding: 30px;
     margin-bottom: 80px;
+}
+
+
+.track-order .child-1 {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+}
+
+.track-order .child-1 img{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.track-order .child-2{
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    gap: 35px;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.track-order form{
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    gap: 15px;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+
 }
 
 .track-order h1{
@@ -405,15 +420,6 @@ section{
     font-size: 16px;
     letter-spacing: 0.5px;
     line-height: 24px;
-}
-
-.track-order form{
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .track-order form img{
@@ -459,15 +465,14 @@ section{
 
 .track-order p{
     position: relative;
-    left: -4px;
+    font-size: 18px;
     height: 3.5rem;
-    width: max-content;
-    padding: 5px;
+    width: 200px;
+    padding: 5px 8px;
     text-align: center;
     background: var(--blue-1);
     color: white;
     border-radius: 4px;
-    width: 80px;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -543,7 +548,7 @@ section{
     text-align: center;
 }
 
-.our-country-services h1{
+.our-country-services > h1{
     font-family: Raleway;
     font-weight: 800;
     color: #11101c;
@@ -551,23 +556,28 @@ section{
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
-    
 }
 
 .our-country-services .service-cards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding-inline: 30px;
 }
 
 .our-country-services .service-cards div{
     position: relative;
     display: grid;
+    grid-template-rows: max-content 16rem max-content max-content;
     justify-items: center;
-    background: white; 
+    gap: 10px;
+    background: rgba(128, 128, 128, 0.4); 
     box-shadow: 0px 0px 20px 5px rgba(63, 61, 86, 0.05); 
     gap: 10px;
     margin-block: 30px;
-    height: 580px;
+    border-radius: 7px;
+    padding: 20px;
+    height: max-content;
     transition: .3s;
     cursor: pointer;
 }
@@ -576,48 +586,33 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
-.our-country-services .service-cards div:hover img{
-    filter: brightness(1.5);
+.our-country-services .service-cards div:hover{
     transition: .3s ease-in-out;
+    background: rgba(128, 128, 128, 0.5);
 }
 
-.our-country-services .service-cards svg{
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.our-country-services .service-cards div:hover p{
+    color: black !important;
 }
 
-.our-country-services .service-cards .svg-txt{
-    fill: #5C5858;
-    text-align: center;
+.our-country-services .service-cards div a{
+    color: black;
+    border-color: black;
+}
+
+.our-country-services .service-cards div a:hover{
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.our-country-services .service-cards div h1{
+    font-size: 20px;
     font-family: Raleway;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-}
-
-.our-country-services .service-cards .svg-txt-1{
-    fill: #000;
-    text-align: center;
-    font-family: Raleway;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-}
-
-.our-country-services .service-cards .card-arrow{
-    position: absolute;
-    bottom: 14%;
-    left: 210px;
-    width: 30px;
-    height: auto;
+    font-weight: 800;
+    color: #11101c;
+    font-size: 23px;
 }
 
 /* section reach out */
@@ -712,6 +707,7 @@ section{
     line-height: 43px; /* 215% */
     letter-spacing: 1.3px;
     text-transform: uppercase;
+    border-radius: 7px;
 }
 
 
@@ -792,6 +788,7 @@ section{
     line-height: 43px; /* 252.941% */
     letter-spacing: 1.3px;
     text-transform: uppercase;
+    border-radius: 7px;
 }
 
 .reach-out .reach-out-parent .reach-out-icons span img{
@@ -809,6 +806,7 @@ section{
     justify-items: center;
     padding: 50px;gap: 10px;
     column-gap: 5px;
+    border-radius: 7px;
 }
 
 .reach-out .reach-out-parent .child-2 form div{
@@ -933,7 +931,7 @@ section{
 }
 
 .testimonials .swiper-wrapper{
-    gap: 20px;
+    gap: 5px;
 }
 
 .testimonials .swiper-wrapper:hover{
@@ -955,7 +953,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
     height: max-content;
     border-radius: 16px;
     display: grid;
@@ -1266,12 +1264,15 @@ section{
 }
 
 .about-us .child-2 {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     height: max-content;
     gap: 35px;
     margin-block: 40px;
-    padding: 30px 50px;
+    padding: 80px 50px;
+    background: #012337;
+    color: white;
 }
 
 .about-us .child-2 div{
@@ -1279,6 +1280,57 @@ section{
     grid-template-rows: max-content 1fr;
     justify-content: center;
     gap: 10px;
+}
+
+.about-us .child-2 .advantages {
+    width: 100%;
+    justify-content: left;
+    padding-left: 30px;
+    gap: 200px;
+}
+
+.about-us .child-2 .advantages::before{
+    position: absolute;
+    left: 45%;
+    top: 0;
+    content: "";
+    background: white;
+    width: 10px;
+    height: 65%;
+}
+
+.about-us .child-2 .advantages::after{
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+    content: "";
+    background: white;
+    width: 10px;
+    height: 20%;
+}
+
+.about-us .child-2 h1{
+    color: white !important;
+}
+
+.about-us .child-2 .advantages h1{
+    font-size: 45px;
+    color: white;
+}
+
+.about-us .child-2 .advantages h4{
+    height: max-content;
+    width: 100%;
+    text-align: left;
+    display: grid;
+    gap: 45px;
+}
+
+.about-us .child-2 .advantages p{
+    width: max-content;
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 2px;
 }
 
 
@@ -1296,7 +1348,6 @@ section{
     display: grid;
     justify-content: center;
     align-content: center;
-    color: rgba(60, 60, 67, 0.85);
     font-family: Raleway;
     font-size: 20px;
     font-style: normal;
@@ -1608,9 +1659,9 @@ section{
 .footer .child-1{
     display: grid;
     grid-template-rows: repeat(3, max-content);
-    justify-items: center;
     align-content: center;
     gap: 30px;
+    padding-left: 30px;
 
 }
 
@@ -1625,7 +1676,6 @@ section{
 
 .footer .child-1 h4{
     color: #9291A1;
-    text-align: center;
     font-family: Raleway;
     font-size: 16px;
     font-style: normal;
