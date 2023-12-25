@@ -15,9 +15,9 @@ html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 	-webkit-tap-highlight-color: transparent;
-	text-rendering: optimizeLegibility;
 }
-#body{
+
+body{
     background: #EEEEEE;
     overflow-x: hidden;
 }
@@ -102,6 +102,40 @@ html {
     overflow: hidden;
 }
 
+.main_nav .nav-links-solution{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 15px;
+}
+
+.main_nav .nav-links-solution .carrat{
+    position: relative;
+    top: -2px;
+    font-weight: 700;
+    rotate: 180deg;
+    display: grid;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    z-index: 5;
+    color: white;
+}
+
+.main_nav .nav-links-solution .carrat::after{
+    position: absolute;
+    left: -7px;
+    top: -2.5px;
+    content: "";
+    background: #16A7FC;
+    padding: 5px 10px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    z-index: -1;
+
+
+}
+
 .main_nav .nav-links .menu_triangle{
     position: absolute;
     width: 30px;
@@ -136,7 +170,7 @@ html {
     background: rgb(237, 246, 255);
     top: 65px;
     width: 0;
-    transition: 2s ease-in-out;
+    transition: .6s ease-in-out;
     overflow: hidden;
     z-index: 10;
     border-radius: 7px;
@@ -148,7 +182,7 @@ html {
 
 .main_nav .nav-links:hover .sub_menu{
     width: 80vw;
-    transition: 1s;
+    transition: .3s;
     height: 250px;
     padding: 20px;
     opacity: 1;
@@ -156,7 +190,7 @@ html {
 
 .main_nav .nav-links:not(:hover) .sub_menu{
     height: 100px;
-    transition: 1s;
+    transition: .6s;
     opacity: 0;
 }
 
@@ -409,6 +443,8 @@ section{
 
 }
 
+
+
 .service-cards .icon-1{
     position: relative;
     width: 78px;
@@ -623,54 +659,6 @@ section{
     align-items: center;
 }
 
-/* video section */
-
-.video{
-    width: 100%;
-    height: 80vh;
-    background: linear-gradient(0deg, rgba(10, 9, 13, 0.80) 0%, 
-        rgba(10, 9, 13, 0.80) 100%), 
-        url(../img/video-image.jpg), lightgray;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100vh;
-    display: grid;
-    grid-template-rows: repeat(3, max-content);
-    justify-items: center;
-    align-content: center;
-    gap: 10px;
-}
-
-.video image{
-    width: 115px;
-    height: 115px;
-
-}
-
-.video h1{
-    color: #16A7FC;
-    text-align: center;
-    font-family: Raleway;
-    font-size: 31.25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    width: max-content;
-    height: max-content;
-}
-
-.video h4{
-    color: #FFF;
-    text-align: center;
-    font-family: Raleway;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    width: 50%;
-    height: max-content;
-}
-
 /* other services section.... */
 
 .our-country-services{
@@ -726,6 +714,71 @@ section{
     transition: .3s;
     cursor: pointer;
 }
+
+.our-country-services .service-cards div .card-image{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.our-country-services .service-cards div span .video_tag{
+    position: absolute; 
+    width: 90px;
+    height: 90px;
+    
+}
+
+
+.service-video{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000cf;
+    z-index: 100;
+    overflow: hidden;
+    transition: height .2s;
+    height: 0;
+}
+
+.service-video-close{
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    font-family: Poppins;
+    cursor: pointer;
+}
+
+.service-video .video-card{
+    display: grid;
+    align-items: center;
+    width: 70vw;
+    height: 65vh;
+    grid-template-columns: repeat(1, 1fr);
+    transition: .5s;
+    transform: translateY(-100vw);
+}
+
+.service-video .ab-img{
+    display: grid;
+    justify-self: center;
+    width: 80%;
+    height: 80%;
+}
+
+.service-video .ab-img iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .our-country-services .service-cards .host-img{
     width: 100%;
@@ -1261,11 +1314,81 @@ section{
 .about-us{
     min-height: 100vh;
     width: 100vw;
+    padding-inline: 5vw;
     margin: auto;
     margin-top: 40px;
     height: max-content;
     display: grid;
+    background: #F3F5F6;
     grid-template-rows: repeat(2, max-content);
+}
+
+.founders-about{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000c0;
+    filter: blur(10);
+    z-index: 100;
+    overflow: hidden;
+    transition: height .2s;
+    height: 0;
+}
+
+.founders-about-close{
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    font-family: Poppins;
+    cursor: pointer;
+}
+
+.founders-about .about-card{
+    display: grid;
+    align-items: center;
+    width: 70vw;
+    height: 65vh;
+    background: white;
+    grid-template-columns: repeat(2, 1fr);
+    transition: .5s;
+    transform: translateY(-100vw);
+}
+
+
+
+.founders-about .ab-img{
+    display: grid;
+    justify-self: center;
+    width: 300px;
+    height: 80%;
+}
+
+.founders-about .ab-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founders-about .ab-desc{
+    display: grid;
+    gap: 20px;
+    font-size: 18px;
+    font-family: Poppins;
+    width: 90%;
+}
+
+.founders-about .ab-desc .ceo-social-icons{
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 12px;
 }
 
 .about-us .child-1{
@@ -1273,12 +1396,11 @@ section{
     grid-template-columns: repeat(1, 1fr);
     height: max-content;
     gap: 80px;
-    background: #F3F5F6;
     padding: 50px;
 }
 
 .about-us .child-1 .about-us-title h1{
-    font-size: 60px;
+    font-size: 40px;
     font-family: Raleway;
     width: 100%;
     text-align: center;
@@ -1286,53 +1408,105 @@ section{
 
 .about-us .child-1 .founders{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-
-.about-us .child-1 .ceo-img{
+    grid-template-rows: repeat(2, max-content);
+    gap: 30px;
     position: relative;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    height: max-content;
 }
 
-.about-us .child-1 .ceo-img img{
+.about-us .child-1 .founders h1{
+    display: grid;
+    width: 100%;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 30px;
+}
+
+.about-us .child-1 .founders .executives{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    position: relative;
+    height: max-content;
+}
+
+.about-us .child-1 .founders .HOD{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    position: relative;
+    height: max-content;
+}
+
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 80px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    padding: 8px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    position: relative;
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-front img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.about-us .child-1 .ceo-img p{
+.flip-card-back {
     position: absolute;
-    right: -40px;
-    bottom: -40px;
-    width: 230px;
-    height: 240px;
-    background: #FFF;
+    top: 0;
+    background: #ffffff;
+    transform: rotateY(180deg);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content);
+    justify-items: center;
     align-content: center;
-    padding: 30px;
-    gap: 20px;
-    column-gap: 30px;
+    gap: 15px;
 }
 
-.about-us .child-1 .ceo-img p span{
+.about-us .child-1 .flip-card-back span{
     display: grid;
     grid-column: span 2;
 }
 
-.about-us .child-1 .ceo-img p .ceo-name{
+.about-us .child-1 .flip-card-back .ceo-name{
     color: #000;
     font-family: Raleway;
-    font-size: 24px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 700;
 }
 
-.about-us .child-1 .ceo-img p .ceo-label{
+.about-us .child-1 .flip-card-back .ceo-label{
     color: #6F1DF4;
     font-family: Raleway;
     font-size: 16px;
@@ -1340,7 +1514,7 @@ section{
     font-weight: 400;
 }
 
-.about-us .child-1 .ceo-img p .ceo-text{
+.about-us .child-1 .flip-card-back .ceo-text{
     color: rgba(60, 60, 67, 0.85);
     font-family: Raleway;
     font-size: 16px;
@@ -1349,7 +1523,7 @@ section{
 }
 
 
-.about-us .child-1 .ceo-img p .ceo-social-icons{
+.about-us .child-1 .flip-card-back .ceo-social-icons{
     grid-template-columns: repeat(3, max-content);
     align-content: center;
     gap: 10px;
@@ -1367,7 +1541,7 @@ section{
 .about-us .child-1 .company-desc h1{
     color:  #000;
     font-family: Raleway;
-    font-size: 32px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
 }
@@ -1375,7 +1549,7 @@ section{
 .about-us .child-1 .company-desc p{
     color: rgba(60, 60, 67, 0.85);
     font-family: Raleway;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
 }
@@ -1383,29 +1557,39 @@ section{
 
 .about-us .child-1 .company-desc div{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, max-content);
     height: max-content;
-    width: 70%;
-    gap: 35px;
+    width: 100%;
+    gap: 30px;
 }
 
 .about-us .child-1 .company-desc div a{
     display: grid;
     text-decoration: none;
     border-radius: 64px;
-    padding: 20px 48px;
+    padding: 18px 48px;
     color: #000;
     background: #fff;
     text-align: center;
-    font-size: 18px;
+    font-size: 17px;
     font-family: Raleway;
     font-weight: 600;
-    width: 60%;
+    width: max-content;
     height: max-content;
+    transition: .5s;
+}
+
+.about-us .child-1 .company-desc div a:nth-child(1):hover{
+    filter: brightness(1.5);
+}
+.about-us .child-1 .company-desc div a:nth-child(2):hover{
+    background: #11101c;
+    color: white;
 }
 
 .about-us .child-1 .company-desc div a:nth-child(1){
     background: #2F80ED;
+    color: white;
 }
 
 .about-us .child-2 {
