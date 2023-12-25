@@ -429,27 +429,28 @@ section{
 
 .homepage-services .service-cards div{
     display: grid;
-    grid-template-rows: repeat(5, max-content);
+    grid-template-rows: repeat(3, max-content);
     justify-items: center;
-    /* width: 424px; 
-    height: 583px;  */
-    background: white; 
+    /* background: white;  */
     box-shadow: 0px 0px 20px 5px rgba(63, 61, 86, 0.05); 
     border-radius: 16px; 
-    border: 1px white solid;
+    /* border: 1px white solid; */
     padding: 30px;
     gap: 10px;
     margin-block: 30px;
-
+    cursor: pointer;
 }
 
-
+.homepage-services .service-cards div:hover .icon-1{
+    transform: translateY(-10px) translateZ(-5px);
+}
 
 .service-cards .icon-1{
     position: relative;
     width: 78px;
     height: 94px;
     object-fit: contain;
+    transition: .5s;
 }
 
 .service-cards .icon-2{
