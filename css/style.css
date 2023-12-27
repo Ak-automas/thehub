@@ -57,6 +57,8 @@ body{
     src: url(Poppins-Medium.ttf);
 }
 
+
+
 /* header style.... */
 
 .main_nav{
@@ -892,7 +894,7 @@ section{
 
 .reach-out .reach-out-parent .child-1{
     display: grid;
-    grid-template-rows: repeat(3, max-content);
+    grid-template-rows: repeat(2, max-content);
     justify-items: center;
     width: 100%;
     height: max-content;
@@ -1263,18 +1265,86 @@ section{
 .faq-section {
     padding: 30px;
     font-family: Raleway;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
 }
 
 .faq-section .faq-header{
     font-size: 42px;
-    border-bottom: 1px dotted #ccc;
     padding: 24px;
     width: 100%;
     text-align: center;
 }
 
+
+.faq-section .faq-groups{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, max-content));
+    gap: 10px;
+    justify-content: center;
+    width: 70%;
+    justify-self: center;
+    height: max-content;
+    overflow-y: hidden;
+    padding: 5px;
+}
+
+.faq-section .faq-groups p{
+    position: relative;
+    display: grid;
+    font-size: 20px;
+    background: #2F80ED;
+    padding: 10px 20px;
+    width: max-content;
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 43px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.faq-section .faq-groups p:hover{
+    background: #0a1b25;
+    cursor: pointer;
+}
+
+.faq-section .faq-groups p::before{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    content: "";
+    width: 0;
+    height: calc(100% + 10px);
+    background: #151D7F;
+    background: linear-gradient(135deg, #16A7FC, #151D7F, #39D2EF);
+    border-radius: 7px;
+    transform-origin: top left;
+    transform: rotateZ(-10deg);
+    transition: .3s;
+}
+
+
+.faq-section .faq-groups p:hover::before{
+    left: -5px;
+    transform: rotateZ(0);
+    width: calc(100% + 10px);
+}
+
 .faq-section .faq-content {
-    margin: 0 auto;
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.faq-section .faq-content.active-faq {
+    position: relative;
+    z-index: 10;
 }
 
 .faq-section .faq-question {
@@ -1307,11 +1377,12 @@ section{
     transition: .4s ease;
 }
 
-.faq-section .panel:checked ~ .panel-content{
-    height: auto;
-    opacity: 1;
-    padding: 14px;
+.panel-checked{
+    height: auto !important;
+    opacity: 1 !important;
+    padding: 14px !important;
 }
+
 
 .faq-section .plus {
     position: absolute;
@@ -1489,11 +1560,12 @@ section{
     transform-style: preserve-3d;
     box-shadow: 0 0 80px 10px rgba(0,0,0,0.2);
     cursor: pointer;
-    padding: 8px;
+    border-radius: 7px;
 }
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+
 }
 
 .flip-card-front, .flip-card-back {
@@ -1501,6 +1573,7 @@ section{
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    border-radius: 7px;
 }
 
 .flip-card-front {
@@ -1513,6 +1586,7 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 7px;
 }
 
 .flip-card-back {
@@ -1525,6 +1599,7 @@ section{
     justify-items: center;
     align-content: center;
     gap: 15px;
+    padding-inline: 10px;
 }
 
 .about-us .child-1 .flip-card-back span{
@@ -1641,8 +1716,8 @@ section{
 .about-us .child-2 div{
     display: grid;
     grid-template-rows: max-content 1fr;
-    justify-content: center;
     gap: 10px;
+    justify-content: left;
 }
 
 .about-us .child-2 .advantages {
@@ -1725,17 +1800,47 @@ section{
 }
 
 .about-us .child-2 .core-values h1{
-    width: max-content;
+    width: 100%;
+    text-align: left;
 }
 
 .about-us .child-2 .core-values p{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background: none;
-    border: none;
-    padding: 0;
+    gap: 10px;
 }
 
-.about-us .child-2 .core-values p strong{
-    margin-block: 10px;
+.about-us .child-2 .core-values p span{
+    position: relative;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr max-content;
+    font-size: 20px;
+    background: #2F80ED;
+    padding: 10px 20px;
+    width: max-content;
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-weight: 600;
+    line-height: 43px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    transition: background .5s;
+    box-shadow: 0 0 80px 1px rgba(0, 0, 0, 0.577);
+}
+
+.about-us .child-2 .core-values p span:hover{
+    background: #11101c;
+    cursor: default;
+}
+
+.about-us .child-2 .core-values p span img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 /* responsiveness about us ..... */
@@ -2013,6 +2118,71 @@ section{
     border-radius: 50%;
 }
 
+
+/* services page */
+
+.service-page{
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(3, max-content);
+    font-family: Poppins;
+    width: 100vw;
+    margin: auto;
+    gap: 20px;
+}
+
+.service-page h1{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+    
+}
+
+.service-page .solutions-img{
+    width: 100%;
+    height: 85vh;
+}
+
+.service-page .solutions-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-page .solutions-text{
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5vh 10vw;
+}
+
+.service-page .bg-white{
+    background: transparent;
+    color: black;
+}
+
+.service-page .bg-black{
+    background: #0a1b25;
+    color: white;
+}
+
+.service-page .solutions-text .title{
+    font-size: 24px;
+    font-weight: 450;
+}
+
+.service-page .solutions-text .text{
+    font-size: 16px;
+}
+
+.service-page .bg-white .text{
+    color: #000000cb;
+}
+
+.service-page .bg-black .text{
+    color: #fff;
+}
 /* section footer */
 
 .footer{
@@ -2097,4 +2267,15 @@ section{
     font-style: normal;
     font-weight: 600;
     line-height: 22px; 
+}
+
+/* always remain the last */
+.hide{
+    transition: .5s;
+    opacity: 0;
+}
+
+.show{
+    transition: .5s;
+    opacity: 1;
 }

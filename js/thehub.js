@@ -66,7 +66,7 @@ if (window.location.href.split("/")[3] === "about.html") {
     let founders_description = document.getElementsByClassName("ab-desc")[0];
 
     let about_card = document.getElementsByClassName("about-card")[0];
-    let founders_about_close = document.getElementsByClassName("founders-about-close");
+    let founders_about_close = document.getElementsByClassName("founders-about-close")[0];
 
 
     for (let i = 0; i < flip_cards.length; i++) {
@@ -150,4 +150,57 @@ if (window.location.href.split("/")[3] === "home.html") {
         service_video.style.height = 0;
     })
 
+    //faq funtionality
+
+    let faq_content = document.getElementsByClassName("faq-content")[0];
+    let faq_group_item = document.getElementsByClassName("faq-group-item")
+    
+    for (let i = 0; i < faq_group_item.length; i++) {        
+    
+        faq_group_item[i].addEventListener("click", function(){
+            let group_category = faq_group_item[i].innerHTML;
+            let active_group_item = document.getElementsByClassName("active-faq")[0];
+            
+            if (active_group_item.id.toLowerCase === group_category.toLowerCase()) {
+                // pass
+            } else if(active_group_item.id.toLowerCase !== group_category.toLowerCase()){
+                active_group_item.classList.add("hide");
+                active_group_item.classList.remove("active-faq", "show");
+            
+                let next_active_group_item = document.getElementById(group_category.toLowerCase());
+                next_active_group_item.classList.remove("hide");
+                next_active_group_item.classList.add("show", "active-faq");
+            }
+        })
+    }
+
+    let faq_qstn = document.getElementsByClassName("faq-question");
+
+    for (let i = 0; i < faq_qstn.length; i++) {
+        faq_qstn[i].addEventListener("click", function(){
+            
+            if ( faq_qstn[i].children[0].checked === false ) {
+                console.log(faq_qstn[i].children[3])
+                faq_qstn[i].children[3].classList.add("panel-checked");
+                check(faq_qstn[i].children[0])
+
+            }else if( faq_qstn[i].children[0].checked === true ){
+                faq_qstn[i].children[3].classList.remove("panel-checked");
+                uncheck(faq_qstn[i].children[0])
+
+            }
+            
+        })
+        
+    }
+
+    function check(inpVar) {
+        inpVar.checked = true;
+    }
+    
+    function uncheck(inpVar) {
+        inpVar.checked = false;
+    } 
+
 }
+
