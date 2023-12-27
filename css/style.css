@@ -323,6 +323,44 @@ body{
     
 }
 
+.track-order-container {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    
+    
+}
+
+/* .track-order-container form {
+    width: 100%;
+} */
+
+ .track-your-order {
+    position: relative;
+    right: 60px;
+     
+    
+}
+
+
+.track-your-order input {
+
+    width: 300px;
+    height: 2.5rem;
+    background-color: var(--blue-1);
+    background-image: url(../img/location.svg);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    border-radius: 30px;
+    
+} 
+
+::placeholder {
+    color: #FFF;
+    opacity: 1; 
+  }
+
 .swiper-slide .slider-text{
     z-index: 1;
     position: absolute;
@@ -541,38 +579,7 @@ section{
 
 /* tracking orders section */
 
-.track-order-container {
-    position: absolute;
-    width: 95vw;
-    border: 3px solid white;
-    
-    
-}
 
-.track-order-container form {
-    width: 100%;
-}
-
- .track-your-order {
-    position: relative;
-    right: 50px;
-    
-    
-}
-
-
-.track-your-order input {
-
-    width: 300px;
-    height: 2.5rem;
-    background-color: var(--blue-1);
-    background-image: url(../img/location.svg);
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-    border-radius: 30px;
-
-} 
 
 .track-order{
     width: 100%;
