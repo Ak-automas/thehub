@@ -114,7 +114,6 @@ body{
     position: relative;
     top: -2px;
     font-weight: 700;
-    rotate: 180deg;
     display: grid;
     width: max-content;
     height: max-content;
@@ -125,8 +124,41 @@ body{
 
 .main_nav .nav-links-solution .carrat::after{
     position: absolute;
-    left: -7px;
-    top: -2.5px;
+    left: -3px;
+    top: -0.1px;
+    content: "";
+    background: #16A7FC;
+    padding: 5px 10px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    z-index: -1;
+
+
+}
+
+.main_nav .nav-links-solution-home{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 15px;
+}
+
+.main_nav .nav-links-solution-home .carrat{
+    position: relative;
+    top: -2px;
+    font-weight: 700;
+    display: grid;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    z-index: 5;
+    color: white;
+}
+
+.main_nav .nav-links-solution-home .carrat::after{
+    position: absolute;
+    left: -6px;
+    top: 0px;
     content: "";
     background: #16A7FC;
     padding: 5px 10px;
@@ -322,6 +354,69 @@ body{
     height: 100%;
     
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 10px;
+    
+    
+  }
+
+  .location-text {
+    
+    text-align: center;
+    padding: 80px 50px;
+    line-height: 2.5em;
+    
+    
+  }
+
+  .location-text h1 {
+    
+    font-weight: 300;
+    font-size: 2em;
+    font-family: Raleway;
+    color: #11101c;
+    
+  }
+  .location-text h4 {
+    
+    font-weight: 150;
+    font-size: 1em;
+    font-family: Raleway;
+    color: #11101c;
+    
+  }
+  .location-text h6 {
+    
+    font-weight: 150;
+    font-size: 1em;
+    font-family: Raleway;
+    color: #11101c;
+    
+  }
+  .location-text h6 span {
+    
+    font-weight: 150;
+    font-size: 1em;
+    font-family: Raleway;
+    color: #2F80ED;
+    
+  }
+
+
+
+  
+  .location-image {
+    
+    object-fit: contain;
+    padding: 0 10px;
+
+    
+    
+  }
 
 .track-order-container {
     position: absolute;
@@ -906,7 +1001,7 @@ section{
     width: 100%;
     height: max-content;
     padding: 50px;
-    padding-top: 180px;
+    padding-top: 150px;
     gap: 60px;
     z-index: 2;
 }
