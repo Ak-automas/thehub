@@ -107,7 +107,7 @@ body{
 .main_nav .nav-links-solution{
     display: grid;
     grid-template-columns: repeat(2, max-content);
-    gap: 15px;
+    gap: 12px;
 }
 
 .main_nav .nav-links-solution .carrat{
@@ -122,14 +122,7 @@ body{
     color: white;
 }
 
-.main_nav .nav-links-solution .carrat::after{
-    position: absolute;
-    left: -3px;
-    top: -0.1px;
-    content: "";
-    background: #16A7FC;
-    padding: 5px 10px;
-    border-radius: 50%;
+.main_nav .nav-links-solution .carrat img{
     width: 25px;
     height: 25px;
     z-index: -1;
@@ -2329,7 +2322,7 @@ section{
     gap: 10px;
     align-items: center;
     grid-template-columns: repeat(2, max-content);
-    background: #02234e;
+    background: #1781fe;
     color: white;
     text-decoration: none;
     width: max-content;
