@@ -2285,10 +2285,109 @@ section{
 .service-page .bg-black .text{
     color: #fff;
 }
+
+
+
+/* services page */
+
+
+.solutions-page{
+    display: grid;
+    width: 100vw;
+    height: max-content;
+    margin-bottom: 0;
+    font-family: Poppins;
+}
+
+.solutions-page .main_child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    background: #FFF;
+}
+
+.solutions-page .child-1{
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(3, max-content);
+    gap: 40px;
+    background: #11101c;
+    color: #FFF;
+    width: 100%;
+    height: 65vh;
+    border-top-right-radius: 35%;
+    padding-inline: 80px;
+    align-content: center;
+}
+
+.solutions-page .child-1 h1{
+    font-size: 30px;
+}
+
+.solutions-page a{
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+    background: #02234e;
+    color: white;
+    text-decoration: none;
+    width: max-content;
+    padding: 10px 20px;
+    border-radius: 7px;
+    transition: .5s;
+}
+
+.solutions-page .solutions-nav a{
+    grid-template-columns: max-content;
+    text-transform: capitalize;
+}
+
+.solutions-page a:hover{
+    background: #04408f;
+}
+
+.solutions-page .child-1 a img{
+    width: 30px;
+    filter: invert();
+    height: 20px;
+}
+
+
+.solutions-page .child-2{
+    position: relative;
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    height: 65vh;
+}
+
+.solutions-page .child-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.solutions-page .solutions-nav{
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    height: max-content;
+    margin: auto;
+    padding-block: 20px;
+    background: #FFF;
+}
+
+/* ................. */
+
+
 /* section footer */
 
 .footer{
     position: relative;
+    bottom: 0;
     height: max-content;
     padding: 60px 30px;
     background: #333;
