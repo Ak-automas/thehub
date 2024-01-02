@@ -109,8 +109,8 @@ if (window.location.href.split("/")[3] === "about.html") {
 video_dictionary = {
     "Supply Chain":"https://www.youtube.com/embed/Lpp9bHtPAN0",
     "Shipping Transport":"https://www.youtube.com/embed/oA1VrK0UMJg",
-    "Special Transport":"https://www.youtube.com/embed/6jUvii0nBcc",
-    "Country Wide":"https://www.youtube.com/embed/0IPRczsDikw",
+    "Special Transport":"https://www.youtube.com/watch?v=6EDCnhbUpgE&t=7s",
+    "Country Wide":"https://www.youtube.com/watch?v=HZGy8QBaSG0",
 }
 if (window.location.href.split("/")[3] === "home.html") {
     let service_video = document.getElementsByClassName("service-video")[0];

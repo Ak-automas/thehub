@@ -23,8 +23,33 @@ body{
 }
 
 :root {
-    --blue-1: rgba(47, 128, 237, 1);
+    --blue-1: rgba(237, 51, 55, 1);
     
+    
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  color: red;
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+  font-size: 30px;
+}
+
+.swiper-button-next.swiper-button-disabled, 
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0;
+}
+
+.swiper-pagination-bullet-active {
+    
+    background-color:  #ed3337 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ed3337
 }
 
 @font-face {
@@ -91,18 +116,14 @@ body{
     cursor: pointer;
 }
 
-.main_nav .styler-bg{
-    display: grid;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: rgba(17, 16, 28, 0.25);
-    transition: .8s;
-    width: 0;
-    overflow: hidden;
+.main_nav .nav-links:hover {
+    
+    cursor: pointer;
+    color: #ed3337;
+    transition: 0.6s;
 }
+
+
 
 .main_nav .nav-links-solution{
     display: grid;
@@ -111,15 +132,8 @@ body{
 }
 
 .main_nav .nav-links-solution .carrat{
-    position: relative;
-    top: -2px;
-    font-weight: 700;
-    display: grid;
-    width: max-content;
-    height: max-content;
-    align-self: center;
-    z-index: 5;
-    color: white;
+   font-size: x-large;
+    
 }
 
 .main_nav .nav-links-solution .carrat img{
@@ -153,7 +167,7 @@ body{
     left: -6px;
     top: 0px;
     content: "";
-    background: #16A7FC;
+    background: #ed3337;
     padding: 5px 10px;
     border-radius: 50%;
     width: 25px;
@@ -250,7 +264,7 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    border-bottom: 3px #16A7FC solid;
+    border-bottom: 3px rgba(237, 51, 55, 1) solid;
     z-index: 11;
     width: 0;
     transition: 1s;
@@ -273,7 +287,7 @@ body{
 }
 
 .main_nav .login-btn{
-    background: #2F80ED;
+    background: #ed3337;
     padding: 12px 16px;
     border-radius: 8px;
     color: #ffffff;
@@ -331,6 +345,13 @@ body{
     justify-content: center;
 }
 
+section{
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    margin-bottom: 60px;
+}
+
 /* slider css */
 
 .swiper {
@@ -343,111 +364,11 @@ body{
     position: relative;
     text-align: left;
     font-size: 28px;
-    background: #444040;
+    background: #ed3337;
     height: 100%;
     
 }
 
-
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto ;
-    gap: 10px;
-    
-    
-  }
-
-  .location-text {
-    
-    text-align: center;
-    padding: 80px 50px;
-    line-height: 2.5em;
-    
-    
-  }
-
-  .location-text h1 {
-    
-    font-weight: 300;
-    font-size: 2em;
-    font-family: Raleway;
-    color: #11101c;
-    
-  }
-  .location-text h4 {
-    
-    font-weight: 150;
-    font-size: 1em;
-    font-family: Raleway;
-    color: #11101c;
-    
-  }
-  .location-text h6 {
-    
-    font-weight: 150;
-    font-size: 1em;
-    font-family: Raleway;
-    color: #11101c;
-    
-  }
-  .location-text h6 span {
-    
-    font-weight: 150;
-    font-size: 1em;
-    font-family: Raleway;
-    color: #2F80ED;
-    
-  }
-
-
-
-  
-  .location-image {
-    
-    object-fit: contain;
-    padding: 0 10px;
-
-    
-    
-  }
-
-.track-order-container {
-    position: absolute;
-    right: 0;
-    bottom: 50px;
-    
-    
-}
-
-/* .track-order-container form {
-    width: 100%;
-} */
-
- .track-your-order {
-    position: relative;
-    right: 60px;
-     
-    
-}
-
-
-.track-your-order input {
-
-    width: 300px;
-    height: 2.5rem;
-    background-color: var(--blue-1);
-    background-image: url(../img/location.svg);
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-    border-radius: 30px;
-    
-} 
-
-::placeholder {
-    color: #FFF;
-    opacity: 1; 
-  }
 
 .swiper-slide .slider-text{
     z-index: 1;
@@ -475,7 +396,7 @@ body{
     text-decoration: none;
     font-size: 20px;
     color: white;
-    background: #2F80ED;
+    background: #ed3337;
     padding: 10px 20px;
     width: max-content;
     border-radius: 7px;
@@ -499,7 +420,7 @@ body{
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--swiper-theme-color);
+    color: #ed3337;
 }
 
 .autoplay-progress svg {
@@ -511,23 +432,51 @@ body{
     width: 100%;
     height: 100%;
     stroke-width: 4px;
-    stroke: var(--swiper-theme-color);
+    stroke: #ed3337;
     fill: none;
     stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
 }
 
-/* sections global */
-
-section{
-    position: relative;
-    width: 100%;
-    min-height: 10vh;
-    margin-bottom: 60px;
+.track-order-container {
+    position: absolute;
+    right: 0;
+    bottom: 50px;   
 }
 
-/* section 2 homepage */
+
+.track-your-order {
+    position: relative;
+    right: 60px;   
+}
+
+
+.track-your-order input {
+
+    width: 325px;
+    height: 2.95rem;
+    background-color: var(--blue-1);
+    background-image: url(../img/location.svg);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    border-radius: 30px;
+    
+} 
+
+::placeholder {
+    color: #FFF;
+    opacity: 1; 
+  }
+
+
+
+/* sections global */
+
+
+
+/* section 2 homepage how it works */
 
 
 .homepage-services{
@@ -536,16 +485,18 @@ section{
     height: max-content;
     padding: 20px;
     margin-block: 65px;
+    
 }
 
 .homepage-services h1{
     font-family: Raleway;
-    font-weight: 800;
+    font-weight: 700;
     color: #11101c;
-    font-size: 39px;
+    font-size: 36px;
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
+    
 }
 
 
@@ -560,12 +511,12 @@ section{
     grid-template-rows: repeat(3, max-content);
     justify-items: center;
     /* background: white;  */
-    box-shadow: 0px 0px 20px 5px rgba(63, 61, 86, 0.05); 
+    /* box-shadow: 0px 0px 20px 5px rgba(63, 61, 86, 0.05);  */
     border-radius: 16px; 
-    /* border: 1px white solid; */
+    /* border: 1px black solid; */
     padding: 30px;
     gap: 10px;
-    margin-block: 30px;
+    margin-block: 5px;
     cursor: pointer;
 }
 
@@ -607,6 +558,7 @@ section{
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
+    
 }
 
 .service-cards p{
@@ -619,15 +571,17 @@ section{
     font-size: 16px;
     letter-spacing: 0;
     line-height: 23.2px;
+    
 }
 
 .service-cards .desc-text{
     min-height: 90px;
+    text-align: center;
 }
 
 .service-cards span{
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
 .service-cards span p{
@@ -653,7 +607,7 @@ section{
     padding: 10px 0;
     color: var(--blue-1);
     border-radius: 5px;
-    border: 1px solid #16a7fc;
+    border: 1px solid #ed3337;
     text-decoration: none;
     justify-items: center;
     margin-top: 18px;
@@ -668,127 +622,64 @@ section{
 /* tracking orders section */
 
 
-
-.track-order{
-    width: 100%;
-    background: #ffffff;
+.location-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50vh;
-    padding: 30px;
-    margin-bottom: 80px;
-}
+    grid-template-columns: auto auto ;
+    gap: 10px;
+    
+  }
 
-
-.track-order .child-1 {
-    position: relative;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50vh;
-}
-
-.track-order .child-1 img{
-    position: relative;
-    width: 85%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.track-order .child-2{
-    display: grid;
-    grid-template-rows: repeat(2, max-content);
-    gap: 35px;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.track-order form{
-    display: grid;
-    grid-template-rows: repeat(2, max-content);
-    gap: 15px;
-    width: 100%;
-    justify-content: left;
-    align-items: center;
-
-}
-
-.track-order h1{
-    font-family: Raleway;
-    font-weight: 800;
-    color: #3e4255;
-    font-size: 36px;
-    letter-spacing: 2.88px;
-    line-height: 64px;
-}
-
-.track-order h5{
-    font-family: Raleway;
-    font-weight: 500;
-    color: #3e4255;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-}
-
-.track-order form img{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 10%;
-}
-
-.track-order input{
-    position: relative;
-    width: 300px;
-    height: 3.5rem;
-    padding: 5px;
-    padding-left: 40px;
-    border-radius: 5px;
-    font-family: Raleway;
-    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
-    outline: none;
-    border: none;
-}
-
-
-.track-order .track-order-input{
-    position: relative;
-    height: max-content;
-    width: max-content;
-    display: grid;
-    align-items: center;
-    border: 1px solid var(--blue-1);
-    border-radius: 5px;
-}
-
-.track-order .track-order-input::after{
-    position: absolute;
-    content: url(../img/location.svg);
-    /* background-image: url(img/location.svg); */
-    width: 20px;
-    height: 20px;
-    z-index: 10;
-    left: 10px;
-}
-
-.track-order p{
-    position: relative;
-    font-size: 18px;
-    height: 3.5rem;
-    width: 200px;
-    padding: 5px 8px;
+  .location-text {
+    
     text-align: center;
-    background: var(--blue-1);
-    color: white;
-    border-radius: 4px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
+    padding: 80px 50px;
+    line-height: 2.5em;
+    
+    
+  }
+
+  .location-text h1 {
+    
+    font-weight: 300;
+    font-size: 2em;
+    font-family: Raleway;
+    color: #11101c;
+    
+  }
+  .location-text h4 {
+    
+    font-weight: 150;
+    font-size: 1em;
+    font-family: Raleway;
+    color: #11101c;
+    
+  }
+  .location-text h6 {
+    
+    font-weight: 150;
+    font-size: 1em;
+    font-family: Raleway;
+    color: #11101c;
+    
+  }
+  .location-text h6 span {
+    
+    font-weight: 150;
+    font-size: 1em;
+    font-family: Raleway;
+    color: #ed3337;
+    
+  }
+
+
+  .location-image {
+    
+    object-fit: contain;
+    padding: 0 10px;
+ 
+  }
+
+
 
 /* other services section.... */
 
@@ -796,11 +687,93 @@ section{
     display: grid;
     grid-template-rows: repeat(3, max-content);
     height: max-content;
-    padding: 20px 0;
+    padding: 20px 80px;
+    /* border: 2px solid red; */
+    
 }
 
+.our-service-cards-container{
+    display: grid;
+    grid-template-rows:  max-content max-content ;
+    gap: 0px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05); 
+    /* border: 2px solid orange; */
+}
+
+.our-service-card-header {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    width: 85%;
+    gap: 70px;
+    height: max-content;
+    
+    margin-top: 40px;
+    
+
+    /* border: 2px solid black; */
+    
+    
+}
+
+.our-service-card-header .child-1 {
+    
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 0.5px;
+    /* border: 2px solid red; */
+    
+}
+
+.our-service-card-header .child-1 h4 {
+    border: 1px solid #ed3337;
+    margin: 30px 40px 0 ;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 46px;
+    border-radius: 20px;
+    color: #ed3337;
+    padding: 0 25px;
+    width: 160px;
+    
+
+}
+
+.our-service-card-header .child-1 h1 {
+
+    font-weight: 900;
+    color: #11101c;
+    font-size: 39px;
+    text-align: center;
+    padding: 0 45px 0;
+    /* border: 1px solid green; */
+    margin-top: 25px;
+    
+    
+    
+
+}
+
+
+
+.our-service-card-header p {
+    border-left: 5px solid red;
+    padding: 2px 50px;
+    line-height: 1.7;
+    font-size: 17px;
+    height: 80px;
+    margin-top: 60px;
+    
+
+}
+
+
+
+
+
+
 .our-country-services h5{
-    color: #2F80ED;
+    color: #ed3337;
     font-family: Raleway;;
     font-size: 24px;
     font-style: normal;
@@ -814,19 +787,21 @@ section{
 
 .our-country-services > h1{
     font-family: Raleway;
-    font-weight: 800;
+    font-weight: 15em;
     color: #11101c;
-    font-size: 39px;
+    font-size: 40px;
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
+    
 }
 
 .our-country-services .service-cards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    padding-inline: 30px;
+    padding-inline: 50px;
+    /* border: 2px solid green;  */
 }
 
 .our-country-services .service-cards div{
@@ -844,6 +819,8 @@ section{
     height: max-content;
     transition: .3s;
     cursor: pointer;
+    /* border: 2px solid blueviolet; */
+    
 }
 
 .our-country-services .service-cards div .card-image{
@@ -956,9 +933,9 @@ section{
 .reach-out h1{
     color: #000;
     font-family: Raleway;
-    font-size: 48px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 20px; /* 41.667% */
     letter-spacing: 1.3px;
     width: 100%;
@@ -1007,7 +984,7 @@ section{
     font-weight: 600;
     line-height: 20px; /* 62.5% */
     letter-spacing: 1.3px;
-    text-transform: uppercase;
+    
 }
 
 
@@ -1020,13 +997,13 @@ section{
     font-weight: 400;
     line-height: 43px; /* 119.444% */
     letter-spacing: 1.3px;
-    text-transform: uppercase;
+    
 }
 
 .reach-out .reach-out-parent a{
     text-decoration: none;
     font-size: 20px;
-    background: #2F80ED;
+    background: #ed3337;
     padding: 10px 20px;
     width: max-content;
     color: #FFF;
@@ -1035,7 +1012,6 @@ section{
     font-weight: 600;
     line-height: 43px; /* 215% */
     letter-spacing: 1.3px;
-    text-transform: uppercase;
     border-radius: 7px;
 }
 
@@ -1065,7 +1041,7 @@ section{
     font-weight: 600;
     line-height: 20px; /* 83.333% */
     letter-spacing: 1.3px;
-    text-transform: capitalize;
+   
 }
 
 
@@ -1076,7 +1052,7 @@ section{
     font-style: normal;
     font-weight: 600;
     letter-spacing: 1.3px;
-    text-transform: capitalize;
+    
 }
 
 .reach-out .reach-out-parent .child-2 p{
@@ -1217,7 +1193,7 @@ section{
 
 
 .testimonials .testimonials-header h5{
-    color: #2F80ED;
+    color: #11101c;
     font-family: Raleway;
     font-size: 24px;
     font-style: normal;
@@ -1301,7 +1277,7 @@ section{
 }
 
 .swiper-slide-testimonial h1{
-    color: #2F80ED;
+    color: #11101c;
     font-family: Raleway;
     font-size: 18px;
     font-style: normal;
@@ -1388,9 +1364,9 @@ section{
     position: relative;
     display: grid;
     font-size: 20px;
-    background: #2F80ED;
-    padding: 10px 20px;
-    width: max-content;
+    background: #ed3337;
+    padding: auto;
+    width: 160px;
     color: #FFF;
     text-align: center;
     font-family: Raleway;
@@ -1415,8 +1391,8 @@ section{
     content: "";
     width: 0;
     height: calc(100% + 10px);
-    background: #151D7F;
-    background: linear-gradient(135deg, #16A7FC, #151D7F, #39D2EF);
+    background: #ed3337;
+    background: linear-gradient(135deg, #f4a1a3, #ed3337, #ed3337);
     border-radius: 7px;
     transform-origin: top left;
     transform: rotateZ(-10deg);
@@ -1711,7 +1687,7 @@ section{
 }
 
 .about-us .child-1 .flip-card-back .ceo-label{
-    color: #6F1DF4;
+    color: #ed3337;
     font-family: Raleway;
     font-size: 16px;
     font-style: normal;
@@ -1792,7 +1768,7 @@ section{
 }
 
 .about-us .child-1 .company-desc div a:nth-child(1){
-    background: #2F80ED;
+    background: #ed3337;
     color: white;
 }
 
@@ -1912,9 +1888,9 @@ section{
     gap: 8px;
     grid-template-columns: 1fr max-content;
     font-size: 20px;
-    background: #2F80ED;
-    padding: 10px 20px;
-    width: max-content;
+    background: #ed3337;
+    padding: 10px 60px;
+    width: 313px;
     color: #FFF;
     text-align: center;
     font-family: Raleway;
