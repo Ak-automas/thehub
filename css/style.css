@@ -81,6 +81,10 @@ body{
     font-family: Poppins;
     src: url(Poppins-Medium.ttf);
 }
+@font-face {
+    font-family: Yantramanav;
+    src: url(Yantramanav-Bold.ttf);
+}
 
 
 
@@ -709,6 +713,8 @@ section{
     height: max-content;
     
     margin-top: 40px;
+    margin-bottom: 3px;
+    
     
 
     /* border: 2px solid black; */
@@ -743,17 +749,13 @@ section{
 
     font-weight: 900;
     color: #11101c;
-    font-size: 39px;
+    font-size: 35px;
     text-align: center;
     padding: 0 45px 0;
     /* border: 1px solid green; */
     margin-top: 25px;
     
-    
-    
-
 }
-
 
 
 .our-service-card-header p {
@@ -763,13 +765,8 @@ section{
     font-size: 17px;
     height: 80px;
     margin-top: 60px;
-    
 
 }
-
-
-
-
 
 
 .our-country-services h5{
@@ -926,20 +923,37 @@ section{
 .reach-out{
     position: relative;
     display: grid;
-    gap: 80px;
+    gap: 35px;
     height: max-content;
+    /* border: 2px solid red; */
+    /* background-image: url(../img/bg.png); */
 }
+
+.reach-out h4 {
+    text-align: center;
+    border: 1px solid #ed3337;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 46px;
+    border-radius: 20px;
+    margin-left: 620px;
+    margin-top: 20px;
+    color: #ed3337;
+    width: 160px;
+}
+
 
 .reach-out h1{
     color: #000;
-    font-family: Raleway;
+    /* font-family: Raleway; */
     font-size: 36px;
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 700;
-    line-height: 20px; /* 41.667% */
-    letter-spacing: 1.3px;
+    /* line-height: 20px; 41.667% */
+    /* letter-spacing: 1.3px; */
     width: 100%;
     text-align: center;
+    
 }
 
 .reach-out .reach-out-parent{
