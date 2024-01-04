@@ -489,7 +489,7 @@ section{
     height: max-content;
     padding: 20px;
     margin-block: 65px;
-    
+    /* border: 2px solid black; */
 }
 
 .homepage-services h1{
@@ -519,7 +519,7 @@ section{
     border-radius: 16px; 
     /* border: 1px black solid; */
     padding: 30px;
-    gap: 10px;
+    gap: 5px;
     margin-block: 5px;
     cursor: pointer;
 }
@@ -548,6 +548,7 @@ section{
     width: 78px;
     height: 94px;
     object-fit: contain;
+    
 }
 
 .service-cards .text-wrapper {
@@ -562,6 +563,8 @@ section{
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
+    /* border: 2px solid black; */
+    margin-bottom: 8px;
     
 }
 
@@ -575,6 +578,7 @@ section{
     font-size: 16px;
     letter-spacing: 0;
     line-height: 23.2px;
+    /* border: 1px solid red; */
     
 }
 
@@ -630,15 +634,16 @@ section{
     display: grid;
     grid-template-columns: auto auto ;
     gap: 10px;
+    /* border: 2px solid red; */
+    /* margin-bottom: 50px */
     
   }
 
   .location-text {
     
     text-align: center;
-    padding: 80px 50px;
+    padding: 145px 50px;
     line-height: 2.5em;
-    
     
   }
 
@@ -650,6 +655,7 @@ section{
     color: #11101c;
     
   }
+
   .location-text h4 {
     
     font-weight: 150;
@@ -658,6 +664,7 @@ section{
     color: #11101c;
     
   }
+
   .location-text h6 {
     
     font-weight: 150;
@@ -666,6 +673,7 @@ section{
     color: #11101c;
     
   }
+
   .location-text h6 span {
     
     font-weight: 150;
@@ -675,13 +683,15 @@ section{
     
   }
 
-
   .location-image {
     
     object-fit: contain;
     padding: 0 10px;
+    /* border: 2px solid black; */
+
  
   }
+  
 
 
 
@@ -691,8 +701,9 @@ section{
     display: grid;
     grid-template-rows: repeat(3, max-content);
     height: max-content;
-    padding: 20px 80px;
-    /* border: 2px solid red; */
+    padding: 0 80px 0;
+    /* border: 2px solid black; */
+    
     
 }
 
@@ -711,16 +722,11 @@ section{
     width: 85%;
     gap: 70px;
     height: max-content;
-    
     margin-top: 40px;
     margin-bottom: 3px;
-    
-    
-
     /* border: 2px solid black; */
-    
-    
 }
+
 
 .our-service-card-header .child-1 {
     
@@ -732,7 +738,7 @@ section{
 }
 
 .our-service-card-header .child-1 h4 {
-    border: 1px solid #ed3337;
+    border: 2px solid #ed3337;
     margin: 30px 40px 0 ;
     font-size: 16px;
     font-weight: 600;
@@ -795,7 +801,7 @@ section{
 
 .our-country-services .service-cards{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     padding-inline: 50px;
     /* border: 2px solid green;  */
@@ -807,7 +813,7 @@ section{
     grid-template-rows: max-content 16rem max-content max-content;
     justify-items: center;
     gap: 10px;
-    background: rgba(128, 128, 128, 0.4); 
+    background: rgba(128, 128, 128, 0.3); 
     box-shadow: 0px 0px 20px 5px rgba(63, 61, 86, 0.05); 
     gap: 10px;
     margin-block: 30px;
@@ -830,7 +836,6 @@ section{
     position: absolute; 
     width: 90px;
     height: 90px;
-    
 }
 
 
@@ -923,10 +928,11 @@ section{
 .reach-out{
     position: relative;
     display: grid;
-    gap: 35px;
+    gap: 60px;
     height: max-content;
-    /* border: 2px solid red; */
-    /* background-image: url(../img/bg.png); */
+    
+    background-image: url(../img/bg.png);
+    
 }
 
 .reach-out h4 {
@@ -943,18 +949,7 @@ section{
 }
 
 
-.reach-out h1{
-    color: #000;
-    /* font-family: Raleway; */
-    font-size: 36px;
-    /* font-style: normal; */
-    font-weight: 700;
-    /* line-height: 20px; 41.667% */
-    /* letter-spacing: 1.3px; */
-    width: 100%;
-    text-align: center;
-    
-}
+
 
 .reach-out .reach-out-parent{
     position: relative;
@@ -1003,14 +998,28 @@ section{
 
 
 .reach-out .reach-out-parent h1{
-    color: #FFF;
+    
+    font-weight: 900;
+    color: #fff;
+    font-size: 35px;
     text-align: center;
-    font-family: Raleway;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 43px; /* 119.444% */
-    letter-spacing: 1.3px;
+    padding: 0 45px 0;
+    /* border: 1px solid green; */
+    margin-top: 25px;
+    
+}
+
+.reach-out .reach-out-parent h4{
+    border: 1px solid #ed3337;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 46px;
+    border-radius: 20px;
+    color: #ed3337;
+    padding: 0 25px;
+    width: 160px;
+    
+    
     
 }
 
@@ -1366,12 +1375,13 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(70px, max-content));
     gap: 10px;
-    justify-content: center;
+    /* justify-content: center; */
     width: 70%;
     justify-self: center;
     height: max-content;
     overflow-y: hidden;
     padding: 5px;
+    
 }
 
 .faq-section .faq-groups p{
@@ -1390,6 +1400,7 @@ section{
     text-transform: uppercase;
     border-radius: 7px;
     transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
 }
 
 .faq-section .faq-groups p:hover{
