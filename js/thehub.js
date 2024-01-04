@@ -159,15 +159,20 @@ if (window.location.href.split("/")[3] === "home.html") {
     
         faq_group_item[i].addEventListener("click", function(){
             let group_category = faq_group_item[i].innerHTML;
+            let active_group_cat = document.getElementsByClassName("active-cat")[0];
             let active_group_item = document.getElementsByClassName("active-faq")[0];
             
-            if (active_group_item.id.toLowerCase === group_category.toLowerCase()) {
+            if (active_group_item.id.toLowerCase() === group_category.toLowerCase()) {
                 // pass
-            } else if(active_group_item.id.toLowerCase !== group_category.toLowerCase()){
+            } else if(active_group_item.id.toLowerCase() !== group_category.toLowerCase()){
+                active_group_cat.classList.remove("active-cat");
                 active_group_item.classList.add("hide");
                 active_group_item.classList.remove("active-faq", "show");
             
                 let next_active_group_item = document.getElementById(group_category.toLowerCase());
+                let next_active_group_cat = document.getElementsByClassName(group_category.toLowerCase())[0];
+                next_active_group_cat.classList.add("active-cat");
+                console.log(next_active_group_cat)
                 next_active_group_item.classList.remove("hide");
                 next_active_group_item.classList.add("show", "active-faq");
             }

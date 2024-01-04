@@ -24,8 +24,7 @@ body{
 
 :root {
     --blue-1: rgba(237, 51, 55, 1);
-    
-    
+    --swiper-theme-color: rgba(237, 51, 55, 1) !important;
 }
 
 .swiper-button-next, 
@@ -235,7 +234,7 @@ body{
 
 .main_nav .nav-links:not(:hover) .sub_menu{
     height: 100px;
-    transition: .6s;
+    transition: .3s;
     opacity: 0;
 }
 
@@ -269,18 +268,22 @@ body{
     right: 0;
     margin: auto;
     border-bottom: 3px rgba(237, 51, 55, 1) solid;
-    z-index: 11;
-    width: 0;
-    transition: 1s;
+/*    z-index: 11;*/
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .4s;
+    background: rgba(237, 51, 55, 1);
 }
 
 .main_nav .sub_menu .sub_menu_items:hover::after{
-    width: 80%;
+    opacity: .8;
+    z-index: -1;
 }
 
 
 .main_nav .nav-links:hover .sub_menu_items{
-    transition: 3s;
+    transition: .6s;
     opacity: 1;
 }
 
@@ -1408,6 +1411,7 @@ section{
     cursor: pointer;
 }
 
+
 .faq-section .faq-groups p::before{
     position: absolute;
     top: -5px;
@@ -1441,6 +1445,10 @@ section{
 .faq-section .faq-content.active-faq {
     position: relative;
     z-index: 10;
+}
+
+.active-cat {
+    background: #0a1b25 !important;
 }
 
 .faq-section .faq-question {
@@ -2282,7 +2290,7 @@ section{
 
 
 
-/* services page */
+/* solutions page */
 
 
 .solutions-page{
@@ -2293,37 +2301,12 @@ section{
     font-family: Poppins;
 }
 
-.solutions-page .main_child{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 100%;
-    background: #FFF;
-}
-
-.solutions-page .child-1{
-    display: grid;
-    position: relative;
-    grid-template-rows: repeat(3, max-content);
-    gap: 40px;
-    background: #11101c;
-    color: #FFF;
-    width: 100%;
-    height: 65vh;
-    border-top-right-radius: 35%;
-    padding-inline: 80px;
-    align-content: center;
-}
-
-.solutions-page .child-1 h1{
-    font-size: 30px;
-}
-
 .solutions-page a{
     display: grid;
     gap: 10px;
     align-items: center;
     grid-template-columns: repeat(2, max-content);
-    background: #1781fe;
+    background: #ed3337;
     color: white;
     text-decoration: none;
     width: max-content;
@@ -2338,42 +2321,89 @@ section{
 }
 
 .solutions-page a:hover{
-    background: #04408f;
-}
-
-.solutions-page .child-1 a img{
-    width: 30px;
-    filter: invert();
-    height: 21px;
+    background: #a33537;
 }
 
 
-.solutions-page .child-2{
+
+.solutions-page .child-1{
+    display: grid;
+    width: 100%;
+    height: 60vh;
+    background-image: url("/img/man-in-a-warehouse.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.solutions-page .child-1 .sol-text{
     position: relative;
     display: grid;
-    justify-items: center;
-    width: 100%;
-    height: 65vh;
-}
-
-.solutions-page .child-2 img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.solutions-page .solutions-nav{
-    display: grid;
-    grid-template-columns: repeat(5, max-content);
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
+    grid-template-rows: repeat(3, max-content);
+    gap:3px;
     height: max-content;
-    margin: auto;
-    padding-block: 20px;
-    background: #FFF;
+    width: max-content;
+    background: rgba(255,255,255, 0.8);
+    padding: 40px;
+    left: 150px;
+    top: 90px;
 }
 
+.solutions-page .child-1 .sol-text h1,
+.solutions-page .child-1 .sol-text h2{
+    color: #ed3337;
+}
+
+.solutions-page .child-1 .sol-text-link{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 10px;
+}
+
+.solutions-page .child-1 .sol-text-link a:nth-child(1){
+    background: none;
+    color: black;
+    border: 1px #ed3337 solid;
+}
+
+.solutions-page .sol-text-link a:nth-child(1):hover{
+    background: #ed3337;
+    color: white;
+}
+
+.solutions-page .homepage-services{
+    margin-block: 0 !important;
+    grid-template-rows: 1fr;
+    width: 80%;
+    margin: auto;
+}
+
+.solutions-page .service-cards{
+    grid-template-columns: repeat(3, 1fr) !important;
+    margin: auto;
+}
+
+
+.solutions-page .profile-text{
+    display: grid;
+    padding: 20px 80px;
+}
+
+.solutions-page .profile-text h1{
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    color: #ed3337;
+    filter: drop-shadow(0px 0px 40px #ed333799);
+}
+
+.solutions-page .profile-text p{
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,.2);
+    border-radius: 7px;
+    padding: 40px;
+}
 /* ................. */
 
 
