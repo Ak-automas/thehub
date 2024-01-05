@@ -93,10 +93,10 @@ body{
     display: grid;
     position: sticky;
     z-index: 100;
-    gap: 15px;
+    gap: 8px;
     grid-template-columns: repeat(6, 1fr);
     background: rgba(120, 114, 114, 0.121);
-    height: 120px;
+    height: 100px;
     align-items: center;
     justify-items: center;
     width: 100vw;
