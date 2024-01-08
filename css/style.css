@@ -2572,7 +2572,7 @@ section{
 
 
 
-/* solutions page */
+/* services page */
 
 
 .solutions-page{
@@ -2658,27 +2658,8 @@ section{
     grid-template-rows: 1fr;
     width: 80%;
     margin: auto;
-}
-
-.solutions-page .service-cards{
-    grid-template-columns: repeat(3, 1fr) !important;
-    margin: auto;
-}
-
-
-.solutions-page .profile-text{
-    display: grid;
-    padding: 20px 80px;
-}
-
-.solutions-page .profile-text h1{
-    font-size: 30px;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    text-transform: uppercase;
-    color: #ed3337;
-    filter: drop-shadow(0px 0px 40px #ed333799);
+    padding-block: 20px;
+    background: #FFF;
 }
 
 .solutions-page .profile-text p{
