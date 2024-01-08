@@ -82,7 +82,9 @@
     <section class="all-sections">
 
         <div class="swiper mySwiper">
+
             <div class="swiper-wrapper">
+
               <div class="swiper-slide">
                 <div class="slider-text">
                   <h1>Worldwide Fulfillment<br> made easy.</h1>
@@ -90,16 +92,7 @@
                   <a href="#reach-out">Get Started</a>  
                 </div>
                 <img src="img/man-in-a-warehouse.jpg" alt="">
-                <div class="track-order-container">
-
-                  <form action="">
-                    <div class="track-your-order">
-                      <input type="text" placeholder="Enter your order number">
-                    </div>
-                    
-                  </form>
-
-                </div>
+                
               </div>
               <div class="swiper-slide">
                 <div class="slider-text">
@@ -111,16 +104,7 @@
                     
                 </div>
                 <img src="img/Thl-animation-image.png" alt="">
-                <div class="track-order-container">
-
-                  <form action="">
-                    <div class="track-your-order">
-                      <input type="text" placeholder="Enter your order number">
-                    </div>
-                    
-                  </form>
-
-                </div>
+                
               </div>
               <div class="swiper-slide">
                 <div class="slider-text">
@@ -133,16 +117,7 @@
 
                 </div>
                 <img src="img/two-men-in-a-warehouse.jpg" alt="">
-                <div class="track-order-container">
-
-                  <form action="">
-                    <div class="track-your-order">
-                      <input type="text" placeholder="Enter your order number">
-                    </div>
-                    
-                  </form>
-
-                </div>
+                
               </div>
               <div class="swiper-slide">
                 <div class="slider-text">
@@ -153,19 +128,18 @@
                     
                 </div>
                 <img src="img/empty-warehouse.jpg" alt="">
-                <div class="track-order-container">
-
-                  <form action="">
-                    <div class="track-your-order">
-                      <input type="text" placeholder="Enter your order number">
-                    </div>
-                    
-                  </form>
-
-                </div>
+                
                 
               </div>
               
+            </div>
+            <div class="track-order-container">
+              <form action="">
+                <div class="track-your-order">
+                  <input type="text" placeholder="Enter your order number">
+                </div>
+                
+              </form>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -718,6 +692,7 @@
         var swiper = new Swiper(".mySwiper", {
           spaceBetween: 30,
           centeredSlides: true,
+          loop:true,
           autoplay: {
             delay: 15000,
             disableOnInteraction: false

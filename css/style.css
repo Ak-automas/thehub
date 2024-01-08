@@ -331,10 +331,6 @@ body{
     .main_nav{
         width: 88vw;
     }
-    .main_nav{
-        background: white;
-        height: max-content;
-    }
     
     .main_nav .login-btn{
         width: max-content;
@@ -469,14 +465,14 @@ section{
 
 .track-order-container {
     position: absolute;
-    right: 0;
-    bottom: 50px;   
+    right: 80px;
+    bottom: 19px;  
+    z-index: 100;
 }
 
 
 .track-your-order {
     position: relative;
-    right: 60px;
 }
 
 
@@ -1825,16 +1821,15 @@ section{
 /* about us */
 .about-us{
     position: relative;
-    top: 80px;
     min-height: 100vh;
     width: 100vw;
     padding-inline: 5vw;
     margin: auto;
-    margin-top: 40px;
+    margin-bottom: 20px;
     height: max-content;
     display: grid;
     background: #F3F5F6;
-    grid-template-rows: repeat(2, max-content);
+    grid-template-rows: repeat(3, max-content);
 }
 
 .founders-about{
@@ -1906,6 +1901,8 @@ section{
 }
 
 .about-us .child-1{
+    position: relative;
+    top: 80px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     height: max-content;
@@ -2117,6 +2114,7 @@ section{
     height: max-content;
     gap: 35px;
     margin-block: 40px;
+    margin-top: 80px;
     padding: 80px 50px;
     background: #012337;
     color: white;
@@ -2250,6 +2248,65 @@ section{
     width: 40px;
     height: 40px;
     object-fit: contain;
+}
+
+
+.about-us .philosophy{
+    margin-bottom: 40px;
+    display: grid;
+    gap: 15px;
+    height: max-content;
+}
+
+.about-us .philosophy h1{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    width: max-content;
+    height: 50px;
+}
+
+.about-us .philosophy h1 strong{
+    font-size: 20px;
+    border-left: 7px solid #ed3337;
+    height: 100%;
+    padding-left: 20px;
+    display: grid;
+    align-items: center;
+}
+
+.about-us .philosophy  p{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+.about-us .philosophy p strong{
+    color: #ed3337;
+}
+
+.about-us .philosophy ul{
+    list-style-type: square;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.about-us .philosophy ul li::marker{
+    /* color: #ed3337; */
 }
 
 /* responsiveness about us ..... */
