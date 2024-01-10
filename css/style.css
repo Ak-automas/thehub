@@ -24,7 +24,8 @@ body{
 
 :root {
     --blue-1: rgba(237, 51, 55, 1);
-    --swiper-theme-color: rgba(237, 51, 55, 1) !important;
+    
+    
 }
 
 .swiper-button-next, 
@@ -445,6 +446,7 @@ section{
     justify-content: center;
     font-weight: bold;
     color: #ed3337;
+    visibility: hidden;
 }
 
 .autoplay-progress svg {
@@ -461,6 +463,7 @@ section{
     stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
+    visibility: hidden;
 }
 
 .track-order-container {
@@ -493,6 +496,7 @@ section{
     color: #FFF;
     opacity: 1; 
   }
+
 
 
 
@@ -718,7 +722,7 @@ section{
     
     position: absolute;
     top: 16%;
-    right: 2%;
+    right: 7.2%;
     width: 223px;
     height: 223px;
     background-image: url(../img/shape-2.png);
@@ -741,7 +745,7 @@ section{
     
     position: absolute;
     top: 5%;
-    right: 5%;
+    right: 10%;
     
   }
   
@@ -806,6 +810,7 @@ section{
     display: grid;
     grid-template-rows: auto auto;
     gap: 0;
+    /* border: 2px solid red; */
 
   }.location-image .child-1 h4 {
     border: 2px solid #ed3337;
@@ -866,6 +871,45 @@ section{
     object-fit: contain;
     
 }
+
+.location-image .child-4  {
+    
+    margin-top: 30px;
+    background-color: rgba(237, 51, 55, 0.8);
+    width: 160px;
+    height: 60px;
+    padding: 0 20px;
+
+}
+
+.location-image .child-4:hover{
+    background: rgba(237, 51, 55, 0.84);
+    color: white;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+
+.location-image .child-4 a  {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 59px;
+    
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1386,9 +1430,9 @@ section{
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 20px; /* 83.333% */
+    line-height: 25px; /* 83.333% */
     letter-spacing: 1.3px;
-    text-transform: lowercase;
+    /* text-transform: capitalize; */
     
 }
 
@@ -1444,8 +1488,11 @@ section{
     grid-template-rows: repeat(2, max-content);
     width: 100%;
     gap: 5px;
+    /* border: 2px black solid; */
     
 }
+
+
 
 .reach-out .reach-out-parent .child-2 form div label{
     color: #FFF;
@@ -1461,9 +1508,24 @@ section{
     grid-column: span 2;
 }
 
+/* .reach-out .reach-out-parent .child-2 form div:nth-child(2){
+    grid-column: span 1;
+} 
+
+.reach-out .reach-out-parent .child-2 form div:nth-child(3){
+    grid-column: span 2;
+}  */
+
 .reach-out .reach-out-parent .child-2 form div:nth-child(4){
     grid-column: span 2;
-}
+} 
+
+.reach-out .reach-out-parent .child-2 form div:nth-child(5){
+    grid-column: span 2;
+} 
+
+
+
 
 .reach-out .reach-out-parent .child-2 form input{
     position: relative;
@@ -1473,6 +1535,17 @@ section{
     border: none;
     height: 50px;
     padding: 5px;
+}
+
+.reach-out .reach-out-parent .child-2 form textarea{
+    position: relative;
+    width: 100%;
+    background: #D9D9D9;
+    outline: none;
+    border: none;
+    height: 160px;
+    padding: 5px;
+    grid-column: span 2;
 }
 
 .reach-out .reach-out-parent .child-2 form div:nth-child(4) input{
@@ -1710,7 +1783,6 @@ section{
     cursor: pointer;
 }
 
-
 .faq-section .faq-groups p::before{
     position: absolute;
     top: -5px;
@@ -1744,10 +1816,6 @@ section{
 .faq-section .faq-content.active-faq {
     position: relative;
     z-index: 10;
-}
-
-.active-cat {
-    background: #0a1b25 !important;
 }
 
 .faq-section .faq-question {
@@ -1815,7 +1883,6 @@ section{
 .faq-section .panel {
     display: none;
 }
-
 
 
 /* about us */
@@ -2430,7 +2497,6 @@ section{
 
 .login-page{
     position: relative;
-    top: 80px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 70vh;
@@ -2591,7 +2657,6 @@ section{
 .service-page{
     display: grid;
     position: relative;
-    top: 80px;
     grid-template-rows: repeat(3, max-content);
     font-family: Poppins;
     width: 100vw;
@@ -2659,6 +2724,11 @@ section{
 
 /* solutions page */
 
+/* services page */
+
+
+/* solutions page */
+
 
 .solutions-page{
     position: relative;
@@ -2699,11 +2769,14 @@ section{
     display: grid;
     width: 100%;
     height: 60vh;
-    background-image: url("/img/man-in-a-warehouse.jpg");
+    background-image: url("../img/6355b46b13cedacfcea5d3b2_ship.png") !important;
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background-size: cover;
+    
 }
+
+
 
 .solutions-page .child-1 .sol-text{
     position: relative;
@@ -2784,18 +2857,14 @@ section{
 }
 
 .solutions-page .profile-text div ul{
-    margin-top: 25px;
+    margin-top: 20px;
     padding-left: 20px;
     list-style: square;
 }
 
 .solutions-page .profile-text div ul li{
-    margin-top: 15px;
+    margin-top: 10px;
 }
-
-
-/* ................. */
-
 
 /* ................. */
 
